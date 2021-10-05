@@ -58,4 +58,13 @@ public class AthleticsCoach implements Coach {
     public String getKit() {
         return "Preferred Ball is " + getBall() + " Preferred Bat is " + getBat();
     }
+
+
+    private void initMethod() {
+        System.out.println("Init Method Working");
+    }
+
+    private void destroyMethod() {
+        System.out.println("Destroy Method Working");
+    }
 }
