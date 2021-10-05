@@ -7,23 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define your beans here -->
-    <bean id="myCoach1" class="com.SpringLearning.CricketCoach">
-        <constructor-arg ref="fortuneID"></constructor-arg>
-    </bean>
-
-    <bean id="myCoach" class="com.SpringLearning.AthleticsCoach">
-        <property name="Diet" ref="dietID"></property>
-        <constructor-arg ref="fortuneID"></constructor-arg>
-        <property name="ball" value="Dukes"></property>
-        <property name="bat" value="${foo.bat}"></property>
-    </bean>
-
-    <bean id="fortuneID" class="com.SpringLearning.HappyFortuneService"></bean>
-
-    <bean id="dietID" class="com.SpringLearning.HealthyDiet"></bean>
-
-    <context:property-placeholder location="classpath:Sports.properties"></context:property-placeholder>
+<context:component-scan base-package="com.SpringLearning.Annotations"></context:component-scan>
 </beans>
 
 
