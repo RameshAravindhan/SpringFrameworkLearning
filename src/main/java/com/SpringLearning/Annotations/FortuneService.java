@@ -1,4 +1,4 @@
-package com.SpringLearning;
+package com.SpringLearning.Annotations;
 
 public interface FortuneService {
 
