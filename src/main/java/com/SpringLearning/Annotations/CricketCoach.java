@@ -3,9 +3,14 @@ package com.SpringLearning.Annotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component("myCoach")
+@Scope("singleton")
 public class CricketCoach implements Coach {
 
 
@@ -66,5 +71,14 @@ public class CricketCoach implements Coach {
         return fortuneService.fortune();
     }
 
+    @PostConstruct
+    public void postconstructMethood() {
+        System.out.println("Post Construct Method");
+    }
+
+    @PreDestroy
+    public void preDestroyMethod() {
+        System.out.println("Pre Destroy Method");
+    }
 
 }
