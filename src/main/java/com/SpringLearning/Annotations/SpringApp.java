@@ -13,7 +13,7 @@ public class SpringApp {
         Coach coach = context.getBean("myCoach", Coach.class);
 
         System.out.println(coach.advice());
-
+        System.out.println(coach.fortuneAdvice());
         context.close();
 
     }

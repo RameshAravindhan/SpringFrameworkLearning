@@ -4,5 +4,8 @@ public interface Coach {
 
     public String advice();
 
+    public String fortuneAdvice();
+
+
 
 }
